@@ -22,8 +22,8 @@ class PhotoCard extends StatefulWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return 
-    Scaffold(
-      body:
+    // Scaffold(
+    //   body:
             Card(
               child: ListTile(
                   contentPadding: EdgeInsets.all(10.0),
@@ -34,7 +34,7 @@ class PhotoCard extends StatefulWidget {
                     height: 40.0,
                     width: 40.0,
                   )),
-            )
+           
     );
    
   }
