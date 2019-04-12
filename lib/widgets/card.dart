@@ -1,13 +1,28 @@
 import 'package:fljson_rl/models/photo.dart';
 import 'package:flutter/material.dart';
 
-class PhotoCard extends StatelessWidget {
+class PhotoCard extends StatefulWidget {
+
   final Photo photo;
+
+  
   PhotoCard( this.photo );
+
+  @override
+  _PhotoCardState createState() => _PhotoCardState(photo);
+}
+
+  class _PhotoCardState extends State<PhotoCard> {
+   Photo photo;
+
+   _PhotoCardState(this.photo);
+
+  
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
+    return 
+    Scaffold(
       body:
             Card(
               child: ListTile(
@@ -23,5 +38,7 @@ class PhotoCard extends StatelessWidget {
     );
    
   }
+
+ 
 
 }
