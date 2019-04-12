@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:fljson_rl/models/photo.dart';
 import 'package:fljson_rl/utils/API.dart';
+import 'package:fljson_rl/widgets/card.dart';
 import 'package:flutter/material.dart';
 
 class FetchData extends StatefulWidget {
@@ -45,18 +46,20 @@ class _FetchDataState extends State<FetchData> {
         body: ListView.builder(
           itemCount: photos.length,
           itemBuilder: (context, index) {
-            return Card(
-              child: ListTile(
-                  contentPadding: EdgeInsets.all(10.0),
-                  title: new Text(photos[index].title),
-                  trailing: new Image.network(
-                    photos[index].thumbnailUrl,
-                    fit: BoxFit.cover,
-                    height: 40.0,
-                    width: 40.0,
-                  )),
-            );
-          },
+            // var photo= photos[index];
+            return PhotoCard(photos[index]);
+          }
+          //     child: ListTile(
+          //         contentPadding: EdgeInsets.all(10.0),
+          //         title: new Text(photos[index].title),
+          //         trailing: new Image.network(
+          //           photos[index].thumbnailUrl,
+          //           fit: BoxFit.cover,
+          //           height: 40.0,
+          //           width: 40.0,
+          //         )),
+          //   );
+          // },
         )
     );
   }
